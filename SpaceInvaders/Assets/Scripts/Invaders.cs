@@ -6,8 +6,11 @@ public class Invaders : MonoBehaviour
 {
     [SerializeField] private int rows = 5;
     [SerializeField] private int columns = 11;
+    [SerializeField] private float speed = 1.0f;
 
     [SerializeField] private Invader[] prefabs;
+
+    private Vector3 direction = Vector3.right;
 
     private void Awake()
     {
@@ -28,5 +31,36 @@ public class Invaders : MonoBehaviour
                 invader.transform.localPosition = position;
             }
         }
+    }
+
+    private void Update()
+    {
+        transform.position += direction * speed * Time.deltaTime;
+
+        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
+
+        foreach (Transform invader in transform)
+        {
+            if (!invader.gameObject.activeInHierarchy) { continue; }
+
+            if (direction == Vector3.right && invader.position.x >= (rightEdge.x - 1.0f))
+            {
+                AdvanceRow();
+            }
+            else if (direction == Vector3.left && invader.position.x <= (leftEdge.x + 1.0f))
+            {
+                AdvanceRow();
+            }
+        }
+    }
+
+    private void AdvanceRow()
+    {
+        direction.x *= -1.0f;
+
+        Vector3 position = transform.position;
+        position.y += -1.0f;
+        transform.position = position;
     }
 }
