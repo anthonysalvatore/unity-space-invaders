@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57778038}
   - component: {fileID: 57778039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Invaders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rows: 5
   columns: 11
+  speed: 1
   prefabs:
   - {fileID: 2757920163859474072, guid: 6b6e0ee81dda4ba40823cb67d91c7429, type: 3}
   - {fileID: 2623085171226627301, guid: 87d0af5d7cfddfc459c94aa94f002c28, type: 3}
@@ -610,7 +611,7 @@ GameObject:
   - component: {fileID: 750481601}
   - component: {fileID: 750481600}
   - component: {fileID: 750481604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -744,6 +745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
+  laserPrefab: {fileID: -4013572466372193043, guid: c409278c30211c949959bfc0ad9fd18c, type: 3}
 --- !u!1 &878097814
 GameObject:
   m_ObjectHideFlags: 0
