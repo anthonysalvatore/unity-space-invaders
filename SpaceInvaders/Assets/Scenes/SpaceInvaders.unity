@@ -169,7 +169,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rows: 5
   columns: 11
-  speed: 1
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.75
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 8
+      inSlope: 23.589777
+      outSlope: 23.589777
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.02617228
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   prefabs:
   - {fileID: 2757920163859474072, guid: 6b6e0ee81dda4ba40823cb67d91c7429, type: 3}
   - {fileID: 2623085171226627301, guid: 87d0af5d7cfddfc459c94aa94f002c28, type: 3}
